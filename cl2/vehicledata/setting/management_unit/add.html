@@ -1,0 +1,82 @@
+<!-- 增加单位/部门 -->
+<div class="bjui-pageContent">
+	<form action="#">
+		<div class="panel panel-default">
+			<div style="height: auto;" class="panel-body">
+				<div style="margin-top: 10px;">
+					<span>单位/部门名称：</span>
+					<input class="f" type="text" size="25" value="请输入客户名称" required="required" onblur="if(this.value==''){this.value='请输入客户名称'}" onfocus="if(this.value=='请输入客户名称'){this.value=''}" style="margin-left: 45px;" />
+					<span style="margin-left:65px;margin-right:  31px;">所属单位/部门：</span>
+					<span style="position: relative; display: inline-block;" class="wrap_bjui_btn_box"><input class="form-control" style="padding-right: 15px; width: 150px; " name="custom.profession" id="j_custom_profession" value="" size="15" data-toggle="lookup" data-url="table-edit-lookup.html" data-group="custom" data-width="600" data-height="300" type="text"><a style="height: 22px; line-height: 22px;" class="bjui-lookup" href="javascript:;" data-toggle="lookupbtn"><i class="fa fa-search"></i></a></span>
+					<input type="checkbox" /><span >无</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span>部门编号：</span><input class="f" type="text" value="" size="25" style="margin-left: 77px;" />
+					<span style="margin-left: 65px;margin-right:  65px;">识 别 码：</span>
+					<input type="text" value="请输入数字" size="25" required="required" onblur="if(this.value==''){this.value='请输入数字'}" onfocus="if(this.value=='请输入数字'){this.value=''}" />
+				</div>
+				<div style="margin-top: 10px;">
+					<span>客户类型：</span>
+					<select style="margin-left: 77px;">
+						<option value="1" selected="selected">公司</option>
+						<option value="2">个人</option>
+					</select>
+					<span style="margin-left: 260px;margin-right: 49px;">营业执照号：
+					</span><input type="text" size="25" />
+				</div style="margin-top: 10px;">
+				<div style="margin-top: 10px;">
+					<span>执照签发日期：
+					</span><input aria-required="true" class="form-control ok" style="padding-right: 15px; width: 25px; margin-left: 49px;" name="custom.indate" id="j_custom_indate" data-toggle="datepicker" size="25" type="text" >
+					<span style="margin-left:65px;margin-right: 36px;">执照到期日期：
+					</span><input aria-required="true" class="form-control ok" style="padding-right: 15px; width: 25px;" name="custom.indate" id="j_custom_indate" data-toggle="datepicker" size="25" type="text">
+				</div>
+				<div style="margin-top: 10px;">
+					<span>注册资金：</span>
+					<input type="text" value="请输入数字" size="25" required="required" onblur="if(this.value==''){this.value='请输入数字'}" onfocus="if(this.value=='请输入数字'){this.value=''}" style="margin-left: 73px;" /><span>万元</span>
+					<span style="margin-left: 42px;margin-right: 60px;">注册类型：</span>
+					</span>
+					<input type="text" size="25" />
+				</div>
+				<div style="margin-top: 10px;">
+					<span>注册地址：</span>
+					</span><input type="text" size="25" style="margin-left: 73px;" />
+					<span style="margin-left: 65px;margin-right: 61px;">所属行业：</span>
+					<select>
+						<option value="1" selected="selected">IT</option>
+						<option value="2">政府</option>
+						<option value="3">运输</option>
+					</select>
+				</div>
+				<div style="margin-top: 10px;">
+					<span>组织机构代码：</span> <input type="text" size="25" style="margin-left:49px;" />
+
+					<span style="margin-left: 65px;margin-right: 24px;">国税登记证号码：</span> <input type="text" size="25" />
+
+				</div>
+				<div style="margin-top: 10px;">
+					<span>地税登记证号码：</span> <input type="text" size="25" style="margin-left: 37px;"/>
+
+					<span style="margin-left: 65px;margin-right: 61px;">法人姓名：</span> <input type="text" size="25" />
+
+				</div>
+				<div style="margin-top: 10px;">
+					<span>法人代表身份证号：</span> <input type="text" size="25" style="margin-left: 24px;" />
+
+				</div>
+				<hr>
+				<div style="margin-top: 10px;">
+					<span style="margin-right: 85px;">联系人：</span> <input type="text" size="25" required="required" />
+
+					<span style="margin-left: 65px;margin-right: 62px;">联系电话：</span> <input type="text" size="25" required="required" />
+
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="bjui-pageFooter" style="width: 1140px;">
+		<ul>
+			<li><button type="button" class="btn btn-close" data-icon=""><i class="fa fa-close">取消</i> </button></li>
+			<li><button type="submit" class="btn btn-default" data-icon=""><i class="fa fa-save">保存</i> </button></li>
+		</ul>
+	</div>
+</div>

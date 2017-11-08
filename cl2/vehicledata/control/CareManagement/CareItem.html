@@ -1,0 +1,85 @@
+<div class="bjui-pageContent">
+	<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;待保养项目
+			</div>
+
+			<div style="height: auto;" class="panel-body">
+				车牌：
+				<input type="text" name="chePai">
+				<button type="submit" class="btn-default" data-icon="search" style="float:right;">查询</button>
+			</div>
+		</div>
+	</form>
+	<div class="panel panel-default" style="clear:both;">
+		<button href="javascript:;" class="btn btn-blue" data-toggle="doexport" data-confirm-msg="确定要导出信息吗？"><i class="fa fa-cloud-download"></i>&nbsp;<span>导出EXCEL</span></button>
+		<div style="height: auto;" class="panel-body1">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>序号</td>
+					<td>车牌</td>
+					<td>保养项目</td>
+					<td>实际行驶里程</td>
+					<td>提醒里程</td>
+					<td>保养里程</td>
+					<td>保养开始时间</td>
+					<td>备注</td>
+					<td>操作</td>
+				</tr>
+				<!--<tr>
+					&lt;!&ndash;  <th width="125"></th>&ndash;&gt;
+					<td><input type="checkbox" name=""></td>
+					<td>1</td>
+					<td>京A04271</td>
+					<td>打蜡；换机油；换机滤</td>
+					<td></td>
+					<td>10000</td>
+					<td>5000</td>
+					<td>2616-03-03</td>
+					<td></td>
+					<td><input type="button" value="删除"></td>
+				</tr>-->
+
+			</table>
+		</div>
+		<div class="bjui-pageFooter">
+			<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+				<ul class="pagination">
+					<li class="j-first">
+						<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+						<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+					</li>
+					<li class="j-prev">
+						<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+						<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+					</li>
+					<li class="j-num"><a href="javascript:;">1</a></li>
+					<li class="j-num"><a href="javascript:;">2</a></li>
+					<li class="selected j-num"><a href="javascript:;">3</a></li>
+					<li class="j-num"><a href="javascript:;">4</a></li>
+					<li class="j-num"><a href="javascript:;">5</a></li>
+					<li class="j-num"><a href="javascript:;">6</a></li>
+					<li class="j-num"><a href="javascript:;">7</a></li>
+					<li class="j-num"><a href="javascript:;">8</a></li>
+					<li class="j-num"><a href="javascript:;">9</a></li>
+					<li class="j-num"><a href="javascript:;">10</a></li>
+					<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+						<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+					</li>
+					<li class="j-last">
+						<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+						<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+					</li>
+					<li class="jumpto">
+						<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+						<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

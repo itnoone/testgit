@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>普通地图&全景图</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=927daec2ea9657268bd7e9e7a259bd3d"></script>
+		 <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style type="text/css">
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+			/*#panorama {height: 100%;overflow: hidden;width:500px;}*/
+			
+			#container {
+				height: 100%;
+				overflow: hidden;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<div id="container"></div>
+	<script type="text/javascript">
+		//全景图展示
+		/*	var panorama = new BMap.Panorama('panorama');
+			panorama.setPosition(new BMap.Point(113.770555,34.402162)); //根据经纬度坐标展示全景图
+			panorama.setPov({heading: -40, pitch: 6});
+
+			panorama.addEventListener('position_changed', function(e){ //全景图位置改变后，普通地图中心点也随之改变
+				var pos = panorama.getPosition();
+				map.setCenter(new BMap.Point(pos.lng, pos.lat));
+				marker.setPosition(pos);
+			});*/
+		//普通地图展示
+		var map = new AMap.Map('container', {
+			resizeEnable: true
+		});
+	
+	</script>

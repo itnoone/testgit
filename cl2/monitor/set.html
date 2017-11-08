@@ -1,0 +1,104 @@
+<div class="bjui-pageContent">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			&nbsp;快速查询
+		</div>
+		<div style="height: auto;" class="panel-body">
+				查询按：
+				<select data-toggle="selectpicker"  data-width="200" name="test">
+					<option  value="1">车辆编号</option>
+					<option value="2">终端编号</option>
+				</select>
+				关键字：
+				<input type="text" size="20px" />
+				<button type="submit" class="btn-default" data-icon="search" style="float:right;">查询</button>
+				<a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true)" data-icon="undo" style="float:right;">清空</a>
+			
+		</div>
+	</div>
+	<div class="panel panel-default ">
+		<div class="panel-heading">
+			&nbsp;车辆列表
+		</div>
+		<div style="height: auto;" class="panel-body1">
+
+	
+				<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+					<tr>
+						<td>
+							<input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" name="checkbox" id="j_form_checkbox1"
+							value="1" data-toggle="icheck" type="checkbox">
+						</td>
+						<td>序号</td>
+						<td>车辆编号</td>
+						<td>车型</td>
+						<td>使用单位</td>
+						<td>终端编号</td>
+						<td>中断条形码</td>
+						<td>终端在线状态</td>
+						<td>终端程序版本号</td>
+						<td>当前DBC文件</td>
+						<td>远程终端控制与设值</td>
+					</tr>
+					<tr>
+						<td>
+							<input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" name="checkbox" id="j_form_checkbox1"
+							value="1" data-toggle="icheck" type="checkbox">
+						</td>
+						<td>1</td>
+						<td>VIN4739</td>
+						<td>TEST</td>
+						<td></td>
+						<td>70056444</td>
+						<td>IN-S11</td>
+						<td>在线</td>
+						<td>h007s .M</td>
+						<td>rqv3.43</td>
+						<td >
+								<input  type="button"  value="设置" href="monitor/settingDialog.html" class=" btn btn-default" data-toggle="dialog" data-width="797" data-height="560"  data-mask="true"></input>
+						</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+</div>
+<div class="bjui-pageFooter">
+	<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+		<ul class="pagination">
+			<li class="j-first">
+				<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+				<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+			</li>
+			<li class="j-prev">
+				<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+				<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+			</li>
+			<li class="j-num"><a href="javascript:;">1</a></li>
+			<li class="j-num"><a href="javascript:;">2</a></li>
+			<li class="selected j-num"><a href="javascript:;">3</a></li>
+			<li class="j-num"><a href="javascript:;">4</a></li>
+			<li class="j-num"><a href="javascript:;">5</a></li>
+			<li class="j-num"><a href="javascript:;">6</a></li>
+			<li class="j-num"><a href="javascript:;">7</a></li>
+			<li class="j-num"><a href="javascript:;">8</a></li>
+			<li class="j-num"><a href="javascript:;">9</a></li>
+			<li class="j-num"><a href="javascript:;">10</a></li>
+			<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+				<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+			</li>
+			<li class="j-last">
+				<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+				<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+			</li>
+			<li class="jumpto">
+				<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+				<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+

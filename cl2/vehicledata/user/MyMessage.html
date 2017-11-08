@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyMessage.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	<!-- plugins -->
+		<!-- swfupload for uploadify && kindeditor -->
+		<script src="../../BJUI/js/bjui-dialog.js"></script>
+		<script type="text/javascript">
+			function openMydialog(obj) {
+				//alert(obj.attributes[1].value);//获取href元素的值
+				var url=obj.attributes[1].value;
+				var text=obj.attributes[2].value;
+				var id=obj.attributes[3].value;
+			    $(obj).dialog({id:id, url:url, title:text,width:600});
+			}
+	  </script>
+		
+
+  </head>
+  
+  <body>
+  <div class="bjui-pageContent">
+	<div class="panel panel-default" style="clear:both;">
+		<div class="panel-heading">
+			&nbsp;我的资料
+		</div>
+		</div>
+		<div style="height: auto;" class="panel-body1">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<tr>
+					<td>登录名</td>
+					<td>真实名字</td>
+					<td>性别</td>
+					<td>邮箱</td>
+					<td>电话</td>
+					<td>角色</td>
+					<td>注册日期</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td>旺财</td>
+					<td>小强</td>
+					<td>男</td>
+					<td>it_noonehere@qq.com</td>
+					<td>18383834834</td>
+					<td>普通用户</td>
+					<td>2017-10-25 0:00:00</td>
+					<td>
+						<button type="button"  data-url="vehicledata/user/user_dialog/Look_UserMessage_dialog.html" title="查看" data-id="1" class="btn btn-blue" onclick="openMydialog(this)"><i class="fa fa-binoculars"></i></button>
+						<button type="button" data-url="vehicledata/user/user_dialog/Edit_UserMessage_dialog.html"  title="编辑" data-id="2" class="btn btn-default" onclick="openMydialog(this)"><i class="fa fa-edit"></i></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>	
+  </body>
+</html>

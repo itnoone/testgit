@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AddUser.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	<!-- plugins -->
+	  	<!-- nice validate -->
+		<script type="text/javascript"  src="../../BJUI/js/jquery-1.7.2.min.js"></script>
+  		<script type="text/javascript"  src="../../BJUI/js/bjui-regional.zh-CN.js"></script>
+  		<script type="text/javascript"  src="../../BJUI/plugins/niceValidator/jquery.validator.js"></script>
+		<script type="text/javascript"  src="../../BJUI/plugins/niceValidator/jquery.validator.themes.js"></script>
+		<!-- swfupload for uploadify && kindeditor -->
+		<script src="../../BJUI/js/bjui-dialog.js"></script>
+		<script type="text/javascript">
+			function openMydialog(obj) {
+			
+				
+			
+			}
+	  </script>
+		
+
+  </head>
+  
+  <body>
+	<div class="bjui-pageContent">
+  	<div class="panel panel-default">
+  	<!-- <div class="panel-heading">
+					&nbsp;增加用户
+			</div> -->
+			</div>
+			<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+						<fieldset>
+						<p style="margin-top:10px;">
+							<span style="margin-right: 11px;">登录名：</span>
+							<input name="loginname" placeholder="登录名"
+							        data-rule="登录名: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位">
+							<span style="margin-left: 160px;margin-right: 9px;"">真实姓名：</span>
+							<input  name="realname" placeholder="真实名字"
+							        data-rule="真实名字: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位">
+						</p>
+					
+						<p style="margin-top:10px;">
+							<span style="margin-right: 11px;">电&nbsp;&nbsp;&nbsp;话：</span>
+							<input name="mobilenum" placeholder="电话"
+							        data-rule="手机号: required; mobile;"   
+		       						data-msg-email="{0}请输入正确手机号的格式">
+		
+							<span style="margin-left: 160px;margin-right: 9px;"">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</span>
+							<input name="email" placeholder="邮箱"
+							        data-rule="邮箱: required; email;"   
+		       						data-msg-email="{0}请输入正确的邮箱">
+						</p>
+		
+						
+						<p style="margin-top:10px;">
+							<span style="margin-right: 11px;">密&nbsp;&nbsp;&nbsp;码：</span>
+							<input name="userpwd"placeholder="密码"
+							        data-rule="密码: required; !digits; length[6~]"   
+		       						data-msg-digits="{0}不能使用纯数字"
+		        					data-msg-length="{0}至少6位">
+							<span style="margin-left: 160px;margin-right: 9px;"">确认密码：</span>
+							<input name="userrpwd" placeholder="确认密码"
+							        data-rule="确认密码: required; !digits; length[6~]:match(userpwd)"
+							        data-msg-digits="{0}不能使用纯数字"
+							        data-msg-length="{0}至少6位">
+						</p>
+						<p style="margin-top:10px;height:23.5px">
+							<span style="margin-right: -1px;">单位/部门：</span>
+							<input name="user_department"placeholder="单位/部门"
+							        data-rule="单位/部门: required; !digits; length[3~]"   
+		       						data-msg-digits="{0}不能使用纯数字"
+		        					data-msg-length="{0}至少3位">
+							<span style="margin-left: 156px;margin-right: 6px;"">查找角色：  </span>
+							<input type="text" data-toggle="lookup" title="角色" data-url="admin/rolemanager/role_lookup/role_mylookup.html" name="name" size="20" value="管理员" disabled="disabled" data-title="选择角色" data-width="615"><br><br>
+						</p>
+						<p style="margin-top:1px;">
+							<span style="margin-right: 11px;">性&nbsp;&nbsp;&nbsp;别：</span>
+							<select data-toggle="selectpicker">
+								<option value="1">男</option>
+								<option value="2">女</option>
+							</select>
+							
+						</p>
+						</fieldset>
+						<button type="submit"  class="btn btn-blue" width="10px">提交</button>
+						</form>
+						
+	</div>
+  </body>
+</html>

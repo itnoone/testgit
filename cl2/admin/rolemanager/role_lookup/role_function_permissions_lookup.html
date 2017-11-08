@@ -1,0 +1,115 @@
+<!-- 用户选择角色功能权限 -->
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="mylookup.html" method="post">
+        <ul class="bjui-searchBar">
+            <li><label>名称：</label><input type="text" value="" name="code" size="10" />
+            <button type="submit" class="btn-default" data-icon="search">查询</button>
+            <a class="btn btn-orange" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            <button style="float: right;" type="button" class="btn-blue" data-toggle="lookupback" data-lookupid="ids" data-warn="请至少选择一种" data-icon="check-square-o">选择选中</button>
+        </ul>
+    </form>
+</div>
+<div class="bjui-pageContent">
+    <table data-toggle="tablefixed" data-width="100%" data-layout-h="0">
+        <thead>
+            <tr>
+                <th width="35">序号</th>
+                <th >功能模块</th>
+                <th style="text-align: center">路径</th>
+                <th >功能描述</th>
+                <th width="28"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>
+                <th width="74">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>添加用户</td>
+                <td>admin/manager/add_user.action</td>
+                <td>创建用户</td>
+                <td><input type="checkbox" name="ids" data-toggle="icheck" value="{pid:'1', name1:'添加用户'}"></td>
+                <td>
+                    <a href="javascript:;" data-toggle="lookupback" data-args="{pid:'1', name1:'添加用户'}" class="btn btn-blue" title="选择" data-icon="check">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>删除用户</td>
+                <td>admin/manager/delete_user.action</td>
+                <td>删除用户</td>
+                <td><input type="checkbox" name="ids" data-toggle="icheck" value="{pid:'2', name1:'删除用户'}"></td>
+                <td>
+                    <a href="javascript:;" data-toggle="lookupback" data-args="{pid:'2', name1:'删除用户'}" class="btn btn-blue" title="选择" data-icon="check">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>修改用户信息</td>
+                <td>admin/manager/update_user.action</td>
+                <td>修改用户的信息</td>
+                <td><input type="checkbox" name="ids" data-toggle="icheck" value="{pid:'3', name1:'修改用户信息'}"></td>
+                <td>
+                    <a href="javascript:;" data-toggle="lookupback" data-args="{pid:'3', name1:'修改用户信息'}" class="btn btn-blue" title="选择" data-icon="check">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>查询用户</td>
+                <td>admin/manager/select_user.action</td>
+                <td>查询所有用户信息</td>
+                <td><input type="checkbox" name="ids" data-toggle="icheck" value="{pid:'4', name1:'查询用户'}"></td>
+                <td>
+                    <a href="javascript:;" data-toggle="lookupback" data-args="{pid:'4', name1:'查询用户'}" class="btn btn-blue" title="选择" data-icon="check">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>车辆定位</td>
+                <td>admin/vehicle/control/car_gps_ontime.action</td>
+                <td>车辆即时定位</td>
+                <td><input type="checkbox" name="ids" data-toggle="icheck" value="{pid:'5', name1:'车辆定位'}"></td>
+                <td>
+                    <a href="javascript:;" data-toggle="lookupback" data-args="{pid:'5', name1:'车辆定位'}" class="btn btn-blue" title="选择" data-icon="check">选择</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="bjui-pageFooter" style="width: 600px;">
+			<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+				<ul class="pagination">
+					<li class="j-first">
+						<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+						<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+					</li>
+					<li class="j-prev">
+						<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+						<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+					</li>
+					<li class="j-num"><a href="javascript:;">1</a></li>
+					<li class="j-num"><a href="javascript:;">2</a></li>
+					<li class="selected j-num"><a href="javascript:;">3</a></li>
+					<li class="j-num"><a href="javascript:;">4</a></li>
+					<li class="j-num"><a href="javascript:;">5</a></li>
+					<li class="j-num"><a href="javascript:;">6</a></li>
+					<li class="j-num"><a href="javascript:;">7</a></li>
+					<li class="j-num"><a href="javascript:;">8</a></li>
+					<li class="j-num"><a href="javascript:;">9</a></li>
+					<li class="j-num"><a href="javascript:;">10</a></li>
+					<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+						<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+					</li>
+					<li class="j-last">
+						<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+						<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+					</li>
+					<li class="jumpto">
+						<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+						<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+    
+</div>

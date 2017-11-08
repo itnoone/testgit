@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SearchRoleAndEdit_per_by_role.html</title>
+	<!-- 根据角色分配用户  -->
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	<!-- plugins -->
+		<!-- swfupload for uploadify && kindeditor -->
+		<script src="../../BJUI/js/bjui-dialog.js"></script>
+		<script type="text/javascript">
+			function openMydialog_by_role(obj) {
+				//alert(obj.attributes[1].value);//获取href元素的值
+				var url=obj.attributes[1].value;
+				var text=obj.attributes[2].value;
+				var id=obj.attributes[3].value;
+			    $(obj).dialog({id:id, url:url, title:text,width:854,height:382});
+			}
+			
+			var clickNum=0;
+			
+			//复选框全选
+			function checkAllOrCanale_user(){
+				//全选 
+				if(clickNum%2==0){
+					$("input[name='doc-check-t']").attr("checked","true");//全部选中 
+				}else{
+					$("input[name='doc-check-t']").removeAttr("checked");//取消全选 
+				}
+				
+				clickNum++;
+				checkCount_user();
+			}
+			
+			//测试选中的复选框的个数
+			function checkCount_user(){
+				//获取复选框被选中的次数
+				var c_count=$("input:checkbox:checked").length;
+				if($('#doc-check-aid').attr('checked')){//判断第一行那个是否选中
+					//alert(c_count-1);
+					c_count--;//删除第一行选中的输入框
+				}else{
+					//alert(c_count);
+				}
+				if(c_count>0){
+					//使按钮变得可以点击
+					document.getElementById("bj_pid_by_role").disabled=false;
+				}else{
+					//使按钮变得不可点击
+					document.getElementById("bj_pid_by_role").disabled=true;
+				}
+			}
+	  </script>
+		
+
+  </head>
+  
+  <body>
+  <div class="bjui-pageContent">
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;角色搜索
+			</div>
+		</div>
+			<div style="height: auto;" class="panel-body">
+				<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+					角色名：
+					<input type="text" name="chePai"> 
+					<button type="submit" class="btn-default" data-icon="search" style="float:8	0px;">模糊查询</button>
+				</form>
+			</div>
+	
+
+	<div class="panel panel-default" style="clear:both;">
+		<div class="panel-heading">
+			&nbsp;角色信息
+		</div>
+	</div>
+	<br/>
+	<button type="button" class="btn btn-blue" id="bj_pid_by_role" data-url="admin/rolemanager/role_dialog/role_alluser_dialog.html" data-toggle="dialog" data-width="854" data-height="382" disabled="disabled"><i class="fa fa-edit"></i>批量分配用户</button>
+	<br/>
+	<br>
+		<div style="height: auto;" class="panel-body1">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<tr><th align="center"><input type="checkbox" id="doc-check-aid" name="doc-check-a" onclick="checkAllOrCanale_user()"></th>
+						<th align="center">序号</th>
+						<th align="center">角色名</th>
+						<th align="center">备注</th>
+						<th align="center">功能权限模块</th>
+						<th align="center">数据权限模块</th>
+						<th align="center">操作</th>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td><input type="checkbox" name="doc-check-t" onclick="checkCount_user()"></td>
+					<td>1</td>
+					<td>管理员1</td>
+					<td>这是个管理员角色</td>
+					<td>增删改查用户</td>
+					<td>默认规则</td>
+					<td>
+						<button type="button" data-url="admin/rolemanager/role_dialog/role_alluser_dialog.html"  title="分配用户" data-id="1" class="btn btn-default" onclick="openMydialog_by_role(this)"><i class="fa fa-edit"></i></button>
+					</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td><input type="checkbox" name="doc-check-t" onclick="checkCount_user()"></td>
+					<td>2</td>
+					<td>管理员2</td>
+					<td>这是个管理员角色</td>
+					<td>增删改查用户</td>
+					<td>默认规则</td>
+					<td>
+						<button type="button" data-url="admin/rolemanager/role_dialog/role_alluser_dialog.html"  title="分配用户" data-id="2" class="btn btn-default" onclick="openMydialog_by_role(this)"><i class="fa fa-edit"></i></button>
+					</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td><input type="checkbox" name="doc-check-t" onclick="checkCount_user()"></td>
+					<td>3</td>
+					<td>用户1</td>
+					<td>这是个用户角色</td>
+					<td>增删改查用户</td>
+					<td>默认规则</td>
+					<td>
+						<button type="button" data-url="admin/rolemanager/role_dialog/role_alluser_dialog.html"  title="分配用户" data-id="3" class="btn btn-default" onclick="openMydialog_by_role(this)"><i class="fa fa-edit"></i></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bjui-pageFooter" style="width: 1145px;">
+			<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+				<ul class="pagination">
+					<li class="j-first">
+						<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+						<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+					</li>
+					<li class="j-prev">
+						<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+						<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+					</li>
+					<li class="j-num"><a href="javascript:;">1</a></li>
+					<li class="j-num"><a href="javascript:;">2</a></li>
+					<li class="selected j-num"><a href="javascript:;">3</a></li>
+					<li class="j-num"><a href="javascript:;">4</a></li>
+					<li class="j-num"><a href="javascript:;">5</a></li>
+					<li class="j-num"><a href="javascript:;">6</a></li>
+					<li class="j-num"><a href="javascript:;">7</a></li>
+					<li class="j-num"><a href="javascript:;">8</a></li>
+					<li class="j-num"><a href="javascript:;">9</a></li>
+					<li class="j-num"><a href="javascript:;">10</a></li>
+					<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+						<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+					</li>
+					<li class="j-last">
+						<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+						<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+					</li>
+					<li class="jumpto">
+						<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+						<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

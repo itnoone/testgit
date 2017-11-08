@@ -1,0 +1,33 @@
+<!--添加角色-->
+
+<div class="bjui-pageContent">
+	<form action="ajaxDone1.html" class="pageForm" data-toggle="validate">
+		<input type="hidden" name="dialog.id" value="edce142bc2ed4ec6b623aacaf602a4de">
+		<table class="table table-condensed table-hover">
+			<tbody>
+				<div class="panel panel-default">
+
+					<div style="height: auto; " class="panel-body">
+						<span>角&nbsp;&nbsp;&nbsp;色&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;：</span><input type="text" class="default" size="30px"  name="role_text" placeholder="输入角色名" 
+									data-rule="角色名: required; length[2~]"   
+		       						data-msg-length="{0}至少2位"/><br /><br />
+						<span>选择功能权限：</span><input type="text"  id="function_permission_lookup" data-toggle="lookup"  title="选择功能权限" data-url="admin/rolemanager/role_lookup/role_function_permissions_lookup.html" data-width="615" data-title="查找带回" name="name1" size="30px"  disabled="disabled">
+						<br><br>
+						<span>数&nbsp;&nbsp;据&nbsp;&nbsp;权&nbsp;&nbsp;限：</span><input type="text"  id="data_permission_lookup" value="采用默认规则"  name="data_name_per" size="30px"  disabled="disabled">
+						<br><br>
+						<span style="margin-right: 16px;">备&nbsp;&nbsp;&nbsp;&nbsp;注 &nbsp;&nbsp;&nbsp;&nbsp;:</span><textarea name="beizhu_textarea" cols="28px" rows="6px" placeholder="输入备注"
+									data-rule="备注: required; length[2~]"   
+		       						data-msg-length="{0}至少2位"></textarea>
+					</div>
+
+				</div>
+			</tbody>
+		</table>
+		<div class="bjui-pageFooter" style="width: 570px;">
+			<ul>
+				<li><button type="button" class="btn btn-close" data-icon=""><i class="fa fa-close">取消</i> </button></li>
+				<li><button type="submit" class="btn btn-default" data-icon=""><i class="fa fa-save">确定添加</i> </button></li>
+			</ul>
+		</div>
+	</form>
+</div>

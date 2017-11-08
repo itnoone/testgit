@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>中国位置服务</title>
+		<meta name="Keywords" content="B-JUI,Bootstrap,DWZ,jquery,ui,前端,框架,开源,OSC,开源框架,knaan" />
+		<meta name="Description" content="B-JUI, Bootstrap for DWZ富客户端框架，基于DWZ富客户端框架修改。主要针对皮肤，编辑器，表单验证等方面进行了大量修改，引入了Bootstrap，Font Awesome，KindEditor，jquery.validationEngine，iCheck等众多开源项目。交流QQ群：232781006。" />
+		<!-- bootstrap - css -->
+		<link href="../BJUI/themes/css/bootstrap.css" rel="stylesheet">
+		<!-- core - css -->
+		<link href="../BJUI/themes/css/style.css" rel="stylesheet">
+		<link href="../BJUI/themes/blue/core.css" id="bjui-link-theme" rel="stylesheet">
+		<!-- plug - css -->
+		<link href="../BJUI/plugins/kindeditor_4.1.10/themes/default/default.css" rel="stylesheet">
+		<link href="../BJUI/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+		<link href="../BJUI/plugins/niceValidator/jquery.validator.css" rel="stylesheet">
+		<link href="../BJUI/plugins/bootstrapSelect/bootstrap-select.css" rel="stylesheet">
+		<link href="../BJUI/themes/css/FA/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lte IE 7]>
+<link href="../BJUI/themes/css/ie7.css" rel="stylesheet">
+<![endif]-->
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lte IE 9]>
+    <script src="../BJUI/other/html5shiv.min.js"></script>
+    <script src="../BJUI/other/respond.min.js"></script>
+<![endif]-->
+		<!-- jquery -->
+		<script src="../BJUI/js/jquery-1.7.2.min.js"></script>
+		<script src="../BJUI/js/jquery.cookie.js"></script>
+		<!--[if lte IE 9]>
+<script src="../BJUI/other/jquery.iframe-transport.js"></script>    
+<![endif]-->
+		<!-- BJUI.all 分模块压缩版 -->
+		<script src="../BJUI/js/bjui-all.js"></script>
+		<!-- 以下是B-JUI的分模块未压缩版，建议开发调试阶段使用下面的版本 -->
+		<!--
+<script src="../BJUI/js/bjui-core.js"></script>
+<script src="../BJUI/js/bjui-regional.zh-CN.js"></script>
+<script src="../BJUI/js/bjui-frag.js"></script>
+<script src="../BJUI/js/bjui-extends.js"></script>
+<script src="../BJUI/js/bjui-basedrag.js"></script>
+<script src="../BJUI/js/bjui-slidebar.js"></script>
+<script src="../BJUI/js/bjui-contextmenu.js"></script>
+<script src="../BJUI/js/bjui-navtab.js"></script>
+<script src="../BJUI/js/bjui-dialog.js"></script>
+<script src="../BJUI/js/bjui-taskbar.js"></script>
+<script src="../BJUI/js/bjui-ajax.js"></script>
+<script src="../BJUI/js/bjui-alertmsg.js"></script>
+<script src="../BJUI/js/bjui-pagination.js"></script>
+<script src="../BJUI/js/bjui-util.date.js"></script>
+<script src="../BJUI/js/bjui-datepicker.js"></script>
+<script src="../BJUI/js/bjui-ajaxtab.js"></script>
+<script src="../BJUI/js/bjui-datagrid.js"></script>
+<script src="../BJUI/js/bjui-tablefixed.js"></script>
+<script src="../BJUI/js/bjui-tabledit.js"></script>
+<script src="../BJUI/js/bjui-spinner.js"></script>
+<script src="../BJUI/js/bjui-lookup.js"></script>
+<script src="../BJUI/js/bjui-tags.js"></script>
+<script src="../BJUI/js/bjui-upload.js"></script>
+<script src="../BJUI/js/bjui-theme.js"></script>
+<script src="../BJUI/js/bjui-initui.js"></script>
+<script src="../BJUI/js/bjui-plugins.js"></script>
+-->
+		<!-- plugins -->
+		<!-- swfupload for uploadify && kindeditor -->
+		<script src="../BJUI/plugins/swfupload/swfupload.js"></script>
+		<!-- kindeditor -->
+		<script src="../BJUI/plugins/kindeditor_4.1.10/kindeditor-all.min.js"></script>
+		<script src="../BJUI/plugins/kindeditor_4.1.10/lang/zh_CN.js"></script>
+		<!-- colorpicker -->
+		<script src="../BJUI/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		<!-- ztree -->
+		<script src="../BJUI/plugins/ztree/jquery.ztree.all-3.5.js"></script>
+		<!-- nice validate -->
+		<script src="../BJUI/plugins/niceValidator/jquery.validator.js"></script>
+		<script src="../BJUI/plugins/niceValidator/jquery.validator.themes.js"></script>
+		<!-- bootstrap plugins -->
+		<script src="../BJUI/plugins/bootstrap.min.js"></script>
+		<script src="../BJUI/plugins/bootstrapSelect/bootstrap-select.min.js"></script>
+		<script src="../BJUI/plugins/bootstrapSelect/defaults-zh_CN.min.js"></script>
+		<!-- icheck -->
+		<script src="../BJUI/plugins/icheck/icheck.min.js"></script>
+		<!-- dragsort -->
+		<script src="../BJUI/plugins/dragsort/jquery.dragsort-0.5.1.min.js"></script>
+		<!-- HighCharts -->
+		<script src="../BJUI/plugins/highcharts/highcharts.js"></script>
+		<script src="../BJUI/plugins/highcharts/highcharts-3d.js"></script>
+		<script src="../BJUI/plugins/highcharts/themes/gray.js"></script>
+		<!-- ECharts -->
+		<script src="../BJUI/plugins/echarts/echarts.js"></script>
+		<!-- other plugins -->
+		<script src="../BJUI/plugins/other/jquery.autosize.js"></script>
+		<link href="../BJUI/plugins/uploadify/css/uploadify.css" rel="stylesheet">
+		<script src="../BJUI/plugins/uploadify/scripts/jquery.uploadify.min.js"></script>
+		<script src="../BJUI/plugins/download/jquery.fileDownload.js"></script>
+
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=927daec2ea9657268bd7e9e7a259bd3d"></script>
+		 <!--<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+		 <style type="text/css">
+			/*#panorama {height: 100%;overflow: hidden;width:500px;}*/
+			
+			#container {
+				height: 100%;
+				overflow: hidden;
+				width: 100%;
+				position: absolute;
+			}
+			
+			.bjui-navbar-header span a {
+				color: #F4F4F4;
+			}
+			
+			.ico span:hover {
+				color: #2bb8aa;
+			}
+			
+			.ico span a:hover i {
+				color: #2bb8aa;
+			}
+			
+			.ico i {
+				border: 1px solid #ddd;
+				background: #eee;
+			}
+			
+			.ico span input {
+				border: 1px solid #ddd;
+				background: #FD7F7F;
+			}
+			
+			.ico span a:hover input {
+				color: #2bb8aa;
+			}
+		</style>
+		<!-- init -->
+		<script type="text/javascript">
+			$(function() {
+					BJUI.init({
+							JSPATH: '../BJUI/', //[可选]框架路径
+							PLUGINPATH: '../BJUI/plugins/', //[可选]插件路径
+							loginInfo: {
+								url: 'login_timeout.html',
+								title: '登录',
+								width: 400,
+								height: 200
+							}, // 会话超时后弹出登录对话框
+							statusCode: {
+								ok: 200,
+								error: 300,
+								timeout: 301
+							}, //[可选]
+							ajaxTimeout: 50000, //[可选]全局Ajax请求超时时间(毫秒)
+							pageInfo: {
+								total: 'total',
+								pageCurrent: 'pageCurrent',
+								pageSize: 'pageSize',
+								orderField: 'orderField',
+								orderDirection: 'orderDirection'
+							}, //[可选]分页参数
+							alertMsg: {
+								displayPosition: 'topcenter',
+								displayMode: 'slide',
+								alertTimeout: 3000
+							}, //[可选]信息提示的显示位置，显隐方式，及[info/correct]方式时自动关闭延时(毫秒)
+							keys: {
+								statusCode: 'statusCode',
+								message: 'message'
+							}, //[可选]
+							ui: {
+								windowWidth: 0, //框架可视宽度，0=100%宽，> 600为则居中显示
+								showSlidebar: true, //[可选]左侧导航栏锁定/隐藏
+								clientPaging: true, //[可选]是否在客户端响应分页及排序参数
+								overwriteHomeTab: false //[可选]当打开一个未定义id的navtab时，是否可以覆盖主navtab(我的主页)
+							},
+							debug: true, // [可选]调试模式 [true|false，默认false]
+							theme: 'sky' // 若有Cookie['bjui_theme'],优先选择Cookie['bjui_theme']。皮肤[五种皮肤:default, orange, purple, blue, red, green]
+						})
+						// main - menu
+					$('#bjui-accordionmenu')
+						.collapse()
+						.on('hidden.bs.collapse', function(e) {
+							$(this).find('> .panel > .panel-heading').each(function() {
+								var $heading = $(this),
+									$a = $heading.find('> h4 > a')
+								if ($a.hasClass('collapsed')) $heading.removeClass('active')
+							})
+						})
+						.on('shown.bs.collapse', function(e) {
+							$(this).find('> .panel > .panel-heading').each(function() {
+								var $heading = $(this),
+									$a = $heading.find('> h4 > a')
+								if (!$a.hasClass('collapsed')) $heading.addClass('active')
+							})
+						})
+					$(document).on('click', 'ul.menu-items > li > a', function(e) {
+							var $a = $(this),
+								$li = $a.parent(),
+								options = $a.data('options').toObj()
+							var onClose = function() {
+								$li.removeClass('active')
+							}
+							var onSwitch = function() {
+								$('#bjui-accordionmenu').find('ul.menu-items > li').removeClass('switch')
+								$li.addClass('switch')
+							}
+							$li.addClass('active')
+							if (options) {
+								options.url = $a.attr('href')
+								options.onClose = onClose
+								options.onSwitch = onSwitch
+								if (!options.title) options.title = $a.text()
+								if (!options.target)
+									$a.navtab(options)
+								else
+									$a.dialog(options)
+							}
+							e.preventDefault()
+						})
+						//时钟
+					var today = new Date(),
+						time = today.getTime()
+					$('#bjui-date').html(today.formatDate('yyyy/MM/dd'))
+					setInterval(function() {
+						today = new Date(today.setSeconds(today.getSeconds() + 1))
+						$('#bjui-clock').html(today.formatDate('HH:mm:ss'))
+					}, 1000)
+				})
+				//菜单-事件
+			function MainMenuClick(event, treeId, treeNode) {
+				event.preventDefault()
+				if (treeNode.isParent) {
+					var zTree = $.fn.zTree.getZTreeObj(treeId)
+					zTree.expandNode(treeNode, !treeNode.open, false, true, true)
+					return
+				}
+				if (treeNode.target && treeNode.target == 'dialog')
+					$(event.target).dialog({
+						id: treeNode.tabid,
+						url: treeNode.url,
+						title: treeNode.name
+					})
+				else
+					$(event.target).navtab({
+						id: treeNode.tabid,
+						url: treeNode.url,
+						title: treeNode.name,
+						fresh: treeNode.fresh,
+						external: treeNode.external
+					})
+			}
+		</script>
+		<!-- for doc begin -->
+		<link type="text/css" rel="stylesheet" href="/js/syntaxhighlighter-2.1.382/styles/shCore.css" />
+		<link type="text/css" rel="stylesheet" href="/js/syntaxhighlighter-2.1.382/styles/shThemeEclipse.css" />
+		<script type="text/javascript" src="/js/syntaxhighlighter-2.1.382/scripts/brush.js"></script>
+		<link href="doc/doc.css" rel="stylesheet">
+		<script type="text/javascript">
+			$(function() {
+				SyntaxHighlighter.config.clipboardSwf = '/js/syntaxhighlighter-2.1.382/scripts/clipboard.swf'
+				$(document).on(BJUI.eventType.initUI, function(e) {
+					SyntaxHighlighter.highlight();
+				})
+			})
+		</script>
+		<!-- for doc end -->
+	</head>
+
+	<body>
+
+		<div id="bjui-window">
+			<header id="bjui-header">
+				<div class="bjui-navbar-header" style="margin-top: 20px;">
+					<ul style="float: left;">
+						<a class="bjui-navbar-logo" href="../index.html" style="float: left;margin-top:-19px;margin-left: 6px;"><img src="../images/logo.png" width="90%"></a>
+
+						<select data-toggle="selectpicker" data-width="100" class="show-tick" style="display: inline-block;">
+                                    <option value="" selected="">按VinNo</option>
+                                    <option value="1">下拉选项1</option>
+                                    <option value="2" >下拉选项2</option>
+                                    <option value="3">下拉选项3</option>
+                                    <option value="4">下拉选项4</option>
+                                </select>
+						<input type="text" value="" class="form-control" style="margin-left: 30px;">
+						<button type="button" class="btn btn-default">查询</button>
+						<span style="margin-right: 40px;font-weight: 700;font-size: 16px;margin-left: 5px;color:#fff"><a href="javascript:;">高级查询</a></span>
+					</ul>
+
+					<ul style="float:right;">
+
+						<li class="dropdown" style="margin-right: 20px;border-radius:0;float:right;list-style: none;margin-top: 4px;"><a href="#" style="color:white;font-size: 16px;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-desktop"></i>分屏管理<span class="caret"></span></a>
+							<ul class="dropdown-menu" style="margin-right: 20px;">
+								<li><a href="fenping1.html" data-width="1200" data-title="分屏监控--一屏" data-height="700" data-id="dialog1" data-toggle="dialog">一屏</a></li>
+								<li><a href="fenping2.html" data-width="1200" data-title="分屏监控--两屏" data-height="700" data-id="dialog2" data-toggle="dialog">两屏</a></li>
+								<li><a href="fenping3.html" data-width="1400" data-title="分屏监控--四屏" data-height="700" data-id="dialog3" data-toggle="dialog">四屏</a></li>
+								<li><a href="fenping4.html" data-width="1400" data-title="分屏监控--八屏" data-height="700" data-id="dialog4" data-toggle="dialog">八屏</a></li>
+							</ul>
+							<span style="color:white">可监控:</span><span style="color:white">1</span>
+							<span style="color:white">在线:</span><span style="color:white">1</span>
+
+							<li class="dropdown" style="margin-top: 4px;margin-right: 60px;border-radius:0;float:right;">
+								<a href="#" style="color:white;font-size: 16px;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-search"></i>更多功能<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu" style="width: 200px;">
+									<li style="padding:10px"><input type="checkbox" data-toggle="icheck" data-label="加载充电桩" style="color:black" /></li>
+
+									<li style="padding:10px"><input type="checkbox" data-toggle="icheck" data-label="加载维修站" style="color:black" /></li>
+								</ul>
+							</li>
+						</li>
+
+					</ul>
+				</div>
+				<nav id="bjui-navbar-collapse">
+					<ul class="bjui-navbar-right">
+
+						<!--<li><a href="index.html" title="切换为列表导航(窄版)" style="background-color:#ff7b61;">列表导航栏(窄版)</a></li> 宽屏-->
+						<li class="dropdown"><a href="#" class="dropdown-toggle theme blue" data-toggle="dropdown" title="切换皮肤"><i class="fa fa-tree"></i></a>
+							<ul class="dropdown-menu" role="menu" id="bjui-themes">
+								<li><a href="javascript:;" class="theme_default" data-toggle="theme" data-theme="default">&nbsp;<i class="fa fa-tree"></i> 黑白分明&nbsp;&nbsp;</a></li>
+								<li><a href="javascript:;" class="theme_orange" data-toggle="theme" data-theme="orange">&nbsp;<i class="fa fa-tree"></i> 橘子红了</a></li>
+								<li><a href="javascript:;" class="theme_purple" data-toggle="theme" data-theme="purple">&nbsp;<i class="fa fa-tree"></i> 紫罗兰</a></li>
+								<li class="active"><a href="javascript:;" class="theme_blue" data-toggle="theme" data-theme="blue">&nbsp;<i class="fa fa-tree"></i> 天空蓝</a></li>
+								<li><a href="javascript:;" class="theme_green" data-toggle="theme" data-theme="green">&nbsp;<i class="fa fa-tree"></i> 绿草如茵</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="bjui-hnav" ">
+            <div id="bjui-hnav-navbar-box " ">
+					<ul id="bjui-hnav-navbar" style="margin-left: 0px;">
+						<!--<li style="position: relative;left:-520px;top:-10px;"><select data-toggle="selectpicker" data-width="100" class="show-tick" style="display: inline-block;margin:0 20px">
+                                    <option value="" selected="">按VinNo</option>
+                                    <option value="1">下拉选项1</option>
+                                    <option value="2" >下拉选项2</option>
+                                    <option value="3">下拉选项3</option>
+                                    <option value="4">下拉选项4</option>
+                                </select></li>
+                                <li style="position: relative;left:-490px;top:-10px;"><input type="text" value="" class="form-control"></li>
+                                <li style="position: relative;left:-475px;top:-10px;"><button type="button" class="btn btn-default">查询</button></li>
+            		  <li class="dropdown" style="border-radius:0;"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-desktop"></i>分屏管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu" >
+                            <li><a href="fenping1.html" data-width="1200" data-title="分屏监控--一屏"
+	                				 data-height="700" data-id="dialog1" data-toggle="dialog">一屏</a></li>
+                            <li><a href="fenping2.html" data-width="1200" data-title="分屏监控--两屏"
+	                				 data-height="700" data-id="dialog2" data-toggle="dialog">两屏</a></li>
+                            <li><a href="fenping3.html" data-width="1400" data-title="分屏监控--四屏"
+	                				 data-height="700" data-id="dialog3" data-toggle="dialog">四屏</a></li>
+                            <li><a href="fenping4.html" data-width="1400" data-title="分屏监控--八屏"
+	                				 data-height="700" data-id="dialog4" data-toggle="dialog">八屏</a></li>
+                        </ul>
+                    </li>-->
+					</ul>
+
+				</div>
+		</div>
+		</header>
+		<div id="bjui-container">
+			<div id="bjui-leftside">
+				<div id="bjui-sidebar-s">
+					<div class="collapse"></div>
+				</div>
+				<div id="bjui-sidebar">
+					<div class="toggleCollapse">
+						<h2><i class="fa fa-bars"></i> 车辆列表 </h2><a href="javascript:;" class="lock"><i class="fa fa-lock"></i></a></div>
+					<div style="padding:5px;" class="panel-group panel-main" data-toggle="accordion" id="bjui-accordionmenu" data-heightbox="#bjui-sidebar" data-offsety="26">
+						<!--
+                			左侧
+                        -->
+						<p style="margin: 20px 0 0;">
+							<input type="checkbox" data-toggle="icheck" data-label="全选" checked />
+							<input class="form-control" type="number" min="1" max="20" step="1" value="1" style="width:120px;margin-left: 10px;" />
+						</p>
+
+						<hr style="margin-bottom:10px;border:2px dashed #ddd;border-bottom:none;height: 1px;color:#eee" />
+
+						<p>
+							<input type="checkbox" data-toggle="icheck" />
+							<i class="fa fa-dot-circle-o" style="color:red;font-size: 16px;margin-right:10px;position: relative;top:2px"></i><span>[已定位]</span><span>[停止]</span>
+
+						</p>
+
+						<div style="margin-left: 50px;" class="ico">
+							<p>车牌:<span style="color:#000;font-weight: 700;"></span></p>
+							<p>VIN:<span style="color:#000;font-weight: 700;">VIN4739</span></p>
+							<p>使用单位:<span style="color:#000;font-weight: 700;"></span></p>
+							<p>车型:<span style="color:#000;font-weight: 700;">TEST</span></p>
+							<p>批次:<span style="color:#000;font-weight: 700;"></span></p>
+
+							<span style="display: inline-block;cursor:pointer;margin-right:5px;width:10px;height: 10px;"><i style="font-size: 17px;" class="fa fa-rss"></i></span>
+							<span style="display: inline-block;cursor:pointer;margin-right:10px;width:10px;height: 10px;"><i style="font-size: 17px;" class="fa fa-comments-o" data-toggle="alertmsg" data-type="correct" data-msg="已对车辆VIN4739添加关注！"></i></span>
+							<span>
+	                			<a id="a1" href="map_dialog.html" style="display: inline-block;cursor:pointer;margin-right:5px;color:#000;width:10px;height: 10px;"  data-width="400" data-title="车辆：VIN4739"
+	                				 data-height="400" data-id="dialog" data-toggle="dialog">
+								
+
+	                	
+	                			<i style="font-size: 17px;" class="fa fa-building-o"></i></a>
+	                			
+						
+	                		</span>
+
+							<span>
+								<a href="echart1.html" style="display: inline-block;cursor:pointer;margin-right:10px;color:#000;width:10px;height: 10px;"   data-toggle="dialog" data-width="700" data-height="550" data-id="dialog" data-title="电量统计图">
+									<i style="font-size: 17px;" class="fa fa-server"></i>
+								</a>
+							</span>
+
+							<span style="display: inline-block;cursor:pointer;margin-right:10px;width:10px;height: 10px;"><i style="font-size: 17px;" class="fa fa-bar-chart-o"></i></span>
+							<span style="display: inline-block;cursor:pointer;margin-right:5px;width:10px;height: 10px;"><i style="font-size: 17px;" class="fa fa-image"></i></span>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div id="container"></div>
+			<script type="text/javascript">
+				//全景图展示
+				/*	var panorama = new BMap.Panorama('panorama');
+					panorama.setPosition(new BMap.Point(113.770555,34.402162)); //根据经纬度坐标展示全景图
+					panorama.setPov({heading: -40, pitch: 6});
+
+					panorama.addEventListener('position_changed', function(e){ //全景图位置改变后，普通地图中心点也随之改变
+						var pos = pacheliang1norama.getPosition();
+						map.setCenter(new BMap.Point(pos.lng, pos.lat));
+						marker.setPosition(pos);
+					});*/
+				//普通地图展示
+				var map = new AMap.Map('container', {
+					resizeEnable: true
+				});
+			</script>
+			<!--map-->
+
+		</div>
+
+		<footer id="bjui-footer">
+			Copyright &copy; 2013 - 2015　<a href="" target="_blank">中国位置服务</a>
+		</footer>
+		</div>
+
+	</body>
+
+</html>

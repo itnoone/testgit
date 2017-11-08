@@ -1,0 +1,111 @@
+<!-- 保养项目管理 -->
+
+<div class="bjui-pageContent">
+	<form action="#">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;快速查询
+			</div>
+
+			<div style="height: auto;" class="panel-body">
+				保养项目：
+				<select data-toggle="selectpicker" data-width="200">
+					<option value="1">请您选择...</option>
+					<option value="2">打蜡</option>
+					<option value="3">换机油</option>
+				</select>
+				<button type="submit" class="btn-default" data-icon="search" style="float:right;">查询</button>
+				<a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true)" data-icon="undo" style="float:right;">清空</a>
+			</div>
+		</div>
+	</form>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div>
+				&nbsp;保养项目列表
+				<br />
+			</div>
+		</div>
+
+		<div class="tab">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<div class="datagrid-toolbar">
+					<div class="btn-group" role="group"><button type="button" class="btn btn-blue" href="./vehicledata/setting/data_dictionary/add_baoyang.html" data-toggle="dialog" data-width="570" data-height="185"><i class="fa fa-plus"></i>添加</button>
+					</div>
+					<div class="btn-group" role="group"><button type="button" class="btn btn-red"><i class="fa fa-times"></i>批量删除</button></div>
+				</div>
+				<tr>
+					<td><input type="checkbox" data-toggle="icheck" data-label="" /></td>
+					<td>序号</td>
+					<td>保养项目</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" data-toggle="icheck" data-label="" /></td>
+					<td>1</td>
+					<td>打蜡</td>
+					<td>
+						<button type="button" href="javascript:;" class="btn btn-red row-del" title="删除"  data-confirm-msg="删除操作会导致和该车型相关的保养信息被清空！确实要删除这些记录吗?！"><i class="fa fa-remove" style="font-size: 21px;"></i></button>
+						<button type="button" class="btn btn-blue" href="./vehicledata/setting/data_dictionary/baoyang_dialog.html" data-title="编辑保养信息" data-toggle="dialog" data-width="570" data-height="185" title="编辑保养信息"><i class="fa fa-edit" style="font-size: 21px;"></i></button>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" data-toggle="icheck" data-label="" /></td>
+					<td>2</td>
+					<td>换机油</td>
+					<td>
+						<button type="button" href="javascript:;" class="btn btn-red row-del" title="删除"  data-confirm-msg="删除操作会导致和该车型相关的保养信息被清空！确实要删除这些记录吗?！"><i class="fa fa-remove" style="font-size: 21px;"></i></button>
+						<button type="button" class="btn btn-blue" href="./vehicledata/setting/data_dictionary/baoyang_dialog.html" data-title="编辑保养信息" data-toggle="dialog" data-width="570" data-height="185" title="编辑保养信息"><i class="fa fa-edit" style="font-size: 21px;"></i></button>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" data-toggle="icheck" data-label="" /></td>
+					<td>3</td>
+					<td>换机滤</td>
+					<td>
+						<button type="button" href="javascript:;" class="btn btn-red row-del" title="删除"  data-confirm-msg="删除操作会导致和该车型相关的保养信息被清空！确实要删除这些记录吗?！"><i class="fa fa-remove" style="font-size: 21px;"></i></button>
+						<button type="button" class="btn btn-blue" href="./vehicledata/setting/data_dictionary/baoyang_dialog.html" data-title="编辑保养信息" data-toggle="dialog" data-width="570" data-height="185" title="编辑保养信息"><i class="fa fa-edit" style="font-size: 21px;"></i></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="bjui-pageFooter">
+	<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+		<ul class="pagination">
+			<li class="j-first">
+				<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+				<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+			</li>
+			<li class="j-prev">
+				<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+				<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+			</li>
+			<li class="j-num"><a href="javascript:;">1</a></li>
+			<li class="j-num"><a href="javascript:;">2</a></li>
+			<li class="selected j-num"><a href="javascript:;">3</a></li>
+			<li class="j-num"><a href="javascript:;">4</a></li>
+			<li class="j-num"><a href="javascript:;">5</a></li>
+			<li class="j-num"><a href="javascript:;">6</a></li>
+			<li class="j-num"><a href="javascript:;">7</a></li>
+			<li class="j-num"><a href="javascript:;">8</a></li>
+			<li class="j-num"><a href="javascript:;">9</a></li>
+			<li class="j-num"><a href="javascript:;">10</a></li>
+			<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+				<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+			</li>
+			<li class="j-last">
+				<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+				<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+			</li>
+			<li class="jumpto">
+				<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+				<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+			</li>
+		</ul>
+	</div>
+</div>

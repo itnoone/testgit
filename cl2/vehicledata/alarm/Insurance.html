@@ -1,0 +1,56 @@
+<!--保险提醒-->
+<style type="text/css">
+	#m {
+		margin: 10px 0 0 10px;
+	}
+</style>
+<div class="bjui-pageContent">
+	<div class="panel panel-default">
+		<form action="#">
+			<div id="m">
+				<span style="margin-right: 67px;">车牌:</span><input type="text" data-toggle="lookup" data-url="#" name="name" size="30" required="required" />
+				<span style="margin-left: 60px;margin-right: 40px;">投保日期:</span><input aria-required="true" class="form-control ok" style="padding-right: 15px; width: 150px;" name="custom.indate" id="j_custom_indate" data-toggle="datepicker" size="30" type="text" required="required">
+			</div>
+			<div id="m">
+				<span style="margin-right: 40px;">投保年限:</span>
+				<select>
+					<option value="1" selected="selected">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<span style="margin-left: 325px;margin-right: 41px;">失效日期:</span><input aria-required="true" class="form-control ok" style="padding-right: 15px; width: 150px;" name="custom.indate" id="j_custom_indate" data-toggle="datepicker" size="30" type="text" required="required">
+			</div>
+			<div id="m">
+				<span style="margin-right: 42px;">保险公司:</span><input type="text" size="30" required="required" />
+				<span style="margin-left: 60px;margin-right: 29px;">保险代理人:</span><input type="text" size="30" required="required" />
+			</div>
+			<div id="m">
+				<span style="margin-right: 30px;">代理人电话:</span><input type="text" size="30" required="required" />
+				<span style="margin-left: 60px;margin-right: 53px;">投保人:</span><input type="text" size="30" required="required" />
+			</div>
+			<div id="m">
+				<span style="margin-right: 30px;">投保人电话:</span><input type="text" size="30" required="required" />
+			</div>
+			<div id="m">
+				<span style="margin-right: 65px;">备注:</span><textarea rows="3" cols="30" required="required"></textarea>
+			</div>
+
+			<div id="m">
+				<span>投保项目：</span><br /><br />
+				<span style="margin-left: 30px;">第三方责任险100万</span> <input type="checkbox" data-toggle="icheck" />
+				<span style="margin-left: 30px;">全险</span><input type="checkbox" data-toggle="icheck" />
+				<span style="margin-left: 30px;">交强险</span><input type="checkbox" data-toggle="icheck" />
+				<span style="margin-left: 30px;">第三方责任险60万</span><input type="checkbox" data-toggle="icheck" />
+			</div>
+		</form>
+
+	</div>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="button" class="btn btn-close" data-icon="close"> 取消</button></li>
+		<li><button type="submit" class="btn btn-default" data-icon="save"> 保存</button></li>
+	</ul>
+</div>

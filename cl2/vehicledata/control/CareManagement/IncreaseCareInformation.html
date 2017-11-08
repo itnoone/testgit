@@ -1,0 +1,46 @@
+<div class="bjui-pageContent">
+	<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;增加保养信息
+			</div>
+
+			<div style="height: auto;" class="panel-body">
+				<div style="margin:10px 0 0 10px;">
+				<span style="margin-right: 40px;">车牌:</span><input type="text" required="required" readonly="readonly"/>
+				<button type="button" class="btn btn-default" data-toggle="lookup" data-url="./vehicledata/control/CareManagement/search_plate_dialog.html" data-title="查找带回"></button>
+			</div>
+			<div style="margin-top: 10px;">
+				<fieldset>
+					<legend>保养项目</legend>
+					<input type="checkbox"  style="margin-left: 10px;"/>打蜡
+					<input type="checkbox" style="margin-left: 30px; "/>换机油
+					<input type="checkbox"  style="margin-left: 30px;"/>换机滤
+					<input type="checkbox" style="margin-left: 30px; "/>换汽滤
+				</fieldset>
+			</div>
+
+			<div style="margin-top: 10px;">
+				<span style="margin-right: 25px;">提醒里程:</span><input type="text" value="10000" />公里
+			</div>
+			<div style="margin-top: 10px;">
+				<span style="margin-right: 25px;">保养里程:</span><input type="text" value="10000" />公里
+			</div>
+			<div style="margin-top: 10px;">
+				<span>保养开始日期:</span><input type="text " data-toggle="datepicker" />
+			</div>
+			<div style="margin-top: 10px;">
+				<span style="margin-right: 50px;">备注:</span><textarea name="" rows="" cols=""></textarea>
+			</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="bjui-pageFooter" style="width:1140px;">
+		<ul>
+			<li><button type="button" class="btn btn-default btn-close"><i class="fa fa-remove"></i>取消</button></li>
+			<li><button type="button" class="btn btn-default btn-save"><i class="fa fa-save"></i>保存</button></li>
+		</ul>
+	</div>
+
+</div>

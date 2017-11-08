@@ -1,0 +1,102 @@
+<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+			
+	<div class="bjui-datagrid" style="clear:both;">
+		<div class="datagrid-title">
+			&nbsp;添加部门
+		</div>
+		<div class="datagrid-toolbar">
+			<div class="btn-group" role="group">
+				<a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true)" data-icon="undo" style="float:right;">清空</a>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" href="#" class="btn btn-default" data-icon="save">保存</button>	
+			</div>
+		</div>
+		<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+			<table class="table table-condensed " width="100%">
+	            <tbody>
+	                <tr>
+	                    <td>
+							<label for="j_dep_name" class="control-label x85">部门名称：</label>
+			                <input type="text" name="dep.name" id="j_dep_name" value="" data-rule="required" size="15" placeholder="请输入客户名称">
+			            </td>
+			            <td>    
+			                <label for="j_dep_aff" class="control-label x85">所属部门：</label>
+			                <input type="text" name="custom.profession" id="j_dep_aff" value="" size="15" data-toggle="lookup" data-url="table-edit-lookup.html" data-group="department" data-width="600" data-height="300" placeholder="点击查询">
+			            </td> 
+			            <td>
+			                <label for="j_dep_num" class="control-label x85">部门编号：</label>
+			                <input type="text" name="custom.passportno" id="j_dep_num" value="" data-rule="required" size="15">
+			            </td>
+			            <td>
+			                <label for="j_dep_code" class="control-label x85">识别码：</label>
+			                <input type="text" name="custom.passportno" id="j_dep_code" value="" data-rule="required" size="15"> 
+			            </td> 
+			        </tr>
+			        <tr>
+			            <td>
+			                <label for="j_custom_type" class="control-label x85">客户类型：</label>
+	                        <select name="custom.type" id="j_custom_type" data-toggle="selectpicker" data-rule="required">
+	                            <option value="">请选择</option>
+	                            <option value="1">公司</option>
+	                            <option value="2">个人</option>
+	                        </select>
+						</td>
+						<td>
+							<label for="j_dep_license" class="control-label x85">营业执照：</label>
+			                <input type="text" name="dep.license" id="j_dep_license" value="" data-rule="required" size="15">
+			            </td>
+			            <td>
+	                        <label for="j_license_begin" class="control-label x85">执照签发日：</label>
+	                        <input type="text" name="license.begin" id="j_license_begin" value="" data-toggle="datepicker" data-rule="required;date" size="15">
+	                    </td>
+	                    <td>
+	                        <label for="j_license_end" class="control-label x85">执照到期日：</label>
+	                        <input type="text" name="license.end" id="j_license_end" value="" data-toggle="datepicker" data-rule="required;date" size="15">
+	                    </td>
+			        </tr>
+			        <tr>  
+						<td>
+							<label for="j_registered_fund" class="control-label x85">注册资金：</label>
+			                <input type="text" name="registered.fund" id="j_registered_fund" value="" data-rule="required" size="15" placeholder="以万元为单位">
+			            </td>
+			            <td>
+	                        <label for="j_registered_type" class="control-label x85">注册类型：</label>
+	                        <input type="text" name="registered.type" id="j_registered_type" value="" data-rule="required" size="15">
+	                    </td>
+	                    <td>
+	                        <label for="j_registered_address" class="control-label x85">注册地址：</label>
+	                        <input type="text" name="registered.address" id="j_registered_address" value="" data-rule="required" size="15">
+	                    </td>
+	                    <td>
+			                <label for="j_custom_profession" class="control-label x85">所属职业：</label>
+	                        <select name="custom.profession" id="j_custom_profession" data-toggle="selectpicker" data-rule="required">
+	                            <option value="">请选择</option>
+	                            <option value="1">IT</option>
+	                            <option value="2">运输</option>
+	                        </select>
+						</td>
+			        </tr>
+			        <tr>  
+						<td>
+							<label for="j_registered_fund" class="control-label x85">组织机构代码：</label>
+			                <input type="text" name="registered.fund" id="j_registered_fund" value="" data-rule="required" size="15" placeholder="以万元为单位">
+			            </td>
+			            <td>
+	                        <label for="j_registered_type" class="control-label x85">国税登记证号码：</label>
+	                        <input type="text" name="registered.type" id="j_registered_type" value="" data-rule="required" size="15">
+	                    </td>
+	                    <td>
+	                        <label for="j_registered_address" class="control-label x85">地税登记证号码：</label>
+	                        <input type="text" name="registered.address" id="j_registered_address" value="" data-rule="required" size="15">
+	                    </td>
+	                    <td>
+	                        <label for="j_registered_address" class="control-label x85">法人姓名：</label>
+	                        <input type="text" name="registered.address" id="j_registered_address" value="" data-rule="required" size="15">
+	                    </td>
+			        </tr>
+			    </tbody>
+			</table>
+	    </form>
+	</div>
+</table>

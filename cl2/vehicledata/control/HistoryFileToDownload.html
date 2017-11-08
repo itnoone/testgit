@@ -1,0 +1,118 @@
+<div class="bjui-pageContent">
+	<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;快速查询
+			</div>
+
+			<div style="height: auto;" class="panel-body">
+				车辆编号：
+				<select data-toggle="selectpicker" data-width="200">
+					<option value="1">请您选择...</option>
+					<option value="2">VIN4739</option>
+					<option value="3">终端编号</option>
+				</select>
+				开始时间：
+				<input type="text" name="date" data-toggle="datepicker" placeholder="开始时间" style="width:200px;"> 结束时间：
+				<input type="text" name="date" data-toggle="datepicker" placeholder="结束时间" style="width:200px;">
+
+					<button type="submit" class="btn-default" data-icon="search" style="float:right;">查询</button>
+					<a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true)" data-icon="undo" style="float:right;">清空</a>
+
+			</div>
+		</div>
+	</form>
+	<div class="panel panel-default" style="clear:both;">
+		<div class="panel-heading">
+			&nbsp;历史文件列表
+		</div>
+		<div style="height: auto;" class="panel-body1">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<tr>
+					<td>序号</td>
+					<td>统计日期</td>
+					<td>车辆编号</td>
+					<td>车型名称</td>
+					<td>批次</td>
+					<td>使用区域</td>
+					<td>使用单位</td>
+					<td>终端编号</td>
+					<td>文件名</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td>001</td>
+					<td>2015-11-12</td>
+					<td>021</td>
+					<td>大巴</td>
+					<td>16</td>
+					<td>浙江</td>
+					<td>长兴</td>
+					<td>128</td>
+					<td>yy.txt</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td>002</td>
+					<td>2015-11-11</td>
+					<td>021</td>
+					<td>大巴</td>
+					<td>16</td>
+					<td>浙江</td>
+					<td>长兴</td>
+					<td>128</td>
+					<td>yy.txt</td>
+				</tr>
+				<tr>
+					<!--  <th width="125"></th>-->
+					<td>003</td>
+					<td>2015-11-10</td>
+					<td>028</td>
+					<td>大巴</td>
+					<td>16</td>
+					<td>浙江</td>
+					<td>长兴</td>
+					<td>128</td>
+					<td>mm.txt</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bjui-pageFooter">
+			<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+				<ul class="pagination">
+					<li class="j-first">
+						<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+						<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+					</li>
+					<li class="j-prev">
+						<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+						<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+					</li>
+					<li class="j-num"><a href="javascript:;">1</a></li>
+					<li class="j-num"><a href="javascript:;">2</a></li>
+					<li class="selected j-num"><a href="javascript:;">3</a></li>
+					<li class="j-num"><a href="javascript:;">4</a></li>
+					<li class="j-num"><a href="javascript:;">5</a></li>
+					<li class="j-num"><a href="javascript:;">6</a></li>
+					<li class="j-num"><a href="javascript:;">7</a></li>
+					<li class="j-num"><a href="javascript:;">8</a></li>
+					<li class="j-num"><a href="javascript:;">9</a></li>
+					<li class="j-num"><a href="javascript:;">10</a></li>
+					<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+						<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+					</li>
+					<li class="j-last">
+						<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+						<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+					</li>
+					<li class="jumpto">
+						<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+						<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

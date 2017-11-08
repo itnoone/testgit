@@ -1,0 +1,98 @@
+<script type="text/javascript">
+	function pic_form_upload_success(data) {
+		var json = jQuery.parseJSON(data);
+		DWZ.ajaxDone(json);
+		if (json.statusCode == DWZ.statusCode.ok) {
+			$('#j_form_pic').val(json.navTabId);
+			$('#j_form_span_pic').html('<img src="'+ json.navTabId +'" width="100" />');
+		}
+	}
+</script>
+<div class="bjui-pageContent">
+	<form action="ajaxDone1.html" id="j_form_form" class="pageForm" data-toggle="validate">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				&nbsp;查询车辆
+			</div>
+
+			<div style="height: auto;" class="panel-body">
+				车牌：<input type="text" value="">
+				<button type="submit" class="btn-default" data-icon="search">查询</button>
+			</div>
+		</div>
+	</form>
+
+	<!-- ******************************************************************** -->
+	<div class="panel panel-default" style="clear:both;">
+		<div class="panel-heading">
+			&nbsp;车辆里程列表
+		</div>
+		<div style="height: auto;" class="panel-body1">
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				<tr>
+					<td>车牌</td>
+					<td>在线</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td>豫A06149</td>
+					<td>0</td>
+					<td>
+						<input type="button" href="vehicledata/control/SetTerminalParametersDialog.html" class="btn btn-default" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog" value="操作">
+					</td>
+				</tr>
+				<tr>
+					<td>京XXX</td>
+					<td>0</td>
+					<td>
+						<input type="button" href="vehicledata/control/SetTerminalParametersDialog.html" class="btn btn-default" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog" value="操作">
+					</td>
+				</tr>
+				<tr>
+					<td>豫AW7U03</td>
+					<td>0</td>
+					<td>
+						<input type="button" href="vehicledata/control/SetTerminalParametersDialog.html" class="btn btn-default" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog" value="操作">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bjui-pageFooter">
+			<div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+				<ul class="pagination">
+					<li class="j-first">
+						<a class="first" href="javascript:;"><i class="fa fa-step-backward"></i> 首页</a>
+						<span style="display: none;" class="first"><i class="fa fa-step-backward"></i> 首页</span>
+					</li>
+					<li class="j-prev">
+						<a class="previous" href="javascript:;"><i class="fa fa-backward"></i> 上一页</a>
+						<span style="display: none;" class="previous"><i class="fa fa-backward"></i> 上一页</span>
+					</li>
+					<li class="j-num"><a href="javascript:;">1</a></li>
+					<li class="j-num"><a href="javascript:;">2</a></li>
+					<li class="selected j-num"><a href="javascript:;">3</a></li>
+					<li class="j-num"><a href="javascript:;">4</a></li>
+					<li class="j-num"><a href="javascript:;">5</a></li>
+					<li class="j-num"><a href="javascript:;">6</a></li>
+					<li class="j-num"><a href="javascript:;">7</a></li>
+					<li class="j-num"><a href="javascript:;">8</a></li>
+					<li class="j-num"><a href="javascript:;">9</a></li>
+					<li class="j-num"><a href="javascript:;">10</a></li>
+					<li class="j-next"><a class="next" href="javascript:;">下一页 <i class="fa fa-forward"></i></a>
+						<span style="display: none;" class="next">下一页 <i class="fa fa-forward"></i></span>
+					</li>
+					<li class="j-last">
+						<a class="last" href="javascript:;">末页 <i class="fa fa-step-forward"></i></a>
+						<span style="display: none;" class="last">末页 <i class="fa fa-step-forward"></i></span>
+					</li>
+					<li class="jumpto">
+						<span class="p-input">
+                            <input class="form-control input-sm-pages" size="2" value="7" title="输入跳转页码，回车确认" type="text">
+                        </span>
+						<a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

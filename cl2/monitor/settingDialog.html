@@ -1,0 +1,419 @@
+<!--参数查询-->
+<style type="text/css" id="cscxaa">
+    ul li {
+        margin: 3px 0 0 0;
+    }
+    
+    button {
+        padding: 0 4px 0 0;
+    }
+    
+    .res li {
+        margin: 9px 0 0 0;
+    }
+    
+    .pra li {
+        margin: 9px 0 0 0;
+    }
+    
+    .right {
+        margin-right: 25px;
+    }
+    
+    .right1 {
+        margin-right: 0;
+    }
+    
+    .right2 {
+        margin-right: 20px;
+    }
+    
+    .one {
+        display: block;
+    }
+    
+    .two {
+        display: none;
+    }
+</style>
+
+<style type="text/css" id="csszaa">
+    ul li {
+        margin: 3px 0 0 0;
+    }
+    
+    button {
+        padding: 0 4px 0 0;
+    }
+    
+    .res li {
+        margin: 9px 0 0 0;
+    }
+    
+    .pra li {
+        margin: 9px 0 0 0;
+    }
+    
+    .right {
+        margin-right: 25px;
+    }
+    
+    .right1 {
+        margin-right: 0;
+    }
+    
+    .right2 {
+        margin-right: 20px;
+    }
+    
+    .one {
+        display: block;
+    }
+    
+    .two {
+        display: none;
+    }
+</style>
+<!--终端文件管理-->
+<style id="zdwjglaa">
+    body {
+        font-size: 12px;
+    }
+    
+    #n {
+        margin: 10px auto;
+        width: 920px;
+        border: 1px solid #CCC;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    
+    #n a {
+        padding: 0 4px;
+        color: #333
+    }
+    
+    .Bar,
+    .Bars {
+        position: relative;
+        width: 700px;
+        /* 宽度 */
+        border: 1px solid #B1D632;
+        padding: 1px;
+    }
+    
+    .Bar div,
+    .Bars div {
+        display: block;
+        position: relative;
+        background: #00F;
+        /* 进度条背景颜色 */
+        color: ;
+        height: 20px;
+        /* 高度 */
+        line-height: 20px;
+        /* 必须和高度一致，文本才能垂直居中 */
+    }
+    
+    .Bars div {
+        background: #090
+    }
+    
+    .Bar div span,
+    .Bars div span {
+        position: absolute;
+        width: 200px;
+        /* 宽度 */
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .cent {
+        margin: 0 auto;
+        width: 700px;
+        overflow: hidden
+    }
+</style>
+<!--终端状态-->
+<style id="zdztaa">
+    #aa{
+        margin: 20px 0 0 10px;
+    }
+    
+
+</style>
+<div class="bjui-pageContent">
+    <div style="padding:0px;">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#cscx" role="tab" data-toggle="tab">参数查询</a></li>
+            <li><a href="#cssz" role="tab" data-toggle="tab">参数设置</a></li>
+            <li><a href="#zdzt" role="tab" data-toggle="tab">终端状态</a></li>
+            <li><a href="#zxsj" role="tab" data-toggle="tab">在线升级</a></li>
+            <li><a href="#zdwjgl" role="tab" data-toggle="tab">终端文件管理</a></li>
+            <li><a href="#pz" role="tab" data-toggle="tab">拍照</a></li>
+            <li><a href="#zdmm" role="tab" data-toggle="tab">终端密码</a></li>
+        </ul>
+        <div class="tab-content">
+            <!--参数查询-->
+            <div class="tab-pane fade active in" id="cscx">
+                <form action="#" data-toggle="validate">
+                    <div class="bjui-pageContent one cscxaa" style="margin: 10px 0 0 0; border: 1px;">
+                        <div class="panel panel-default" style="width: 180px;height:440px;float: left;">
+                            <div class="panel-heading">
+                                &nbsp;查询参数
+                            </div>
+                            <div>
+                                <div style="height: auto;" class="panel-body">
+                                    <ul>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;版本查询</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;服务器信息</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;心跳、上报周期</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;最大车速</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;默认DBC文件</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;休眠模式</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;疲劳驾驶</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;自动拍照间隔</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;SD卡存储频率</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;数据上报顺序</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;快速上报周期</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;数据触发状态</li>
+                                        <li><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"
+                                                name="checkbox" id="j_form_checkbox1" value="1" data-toggle="icheck" type="checkbox">&nbsp;零部件号</li>
+                                        <button class="btn btn-default" style="margin: 40px 50px;">&nbsp;点击查询</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" style="width: 540px; float: right;margin-left: 10px;">
+                            <div class="panel-heading">
+                                &nbsp;查询结果
+                            </div>
+                            <div style="height: auto;" class="panel-body">
+                                <ul class="res">
+                                    <li>当前版本：</li>
+                                    <li>服务器：</li>
+                                    <li>上报周期： 心跳周期：</li>
+                                    <li>最大车速：</li>
+                                    <li>默认DBC：</li>
+                                    <li>休眠模式：</li>
+                                    <li>最大行驶时间：最小休息时间：</li>
+                                    <li>自动拍照间隔：</li>
+                                    <li>SD卡存储频率：</li>
+                                    <li>数据上报顺序：</li>
+                                    <li>快速上报周期：上报总时长：</li>
+                                    <li>数据触发状态：</li>
+                                    <li>零部件号：</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" style="width: 540px; float: right;margin: 10px 0 0 0;">
+                            <div class="panel-heading">
+                                &nbsp;区域、目的地查询
+                            </div>
+                            <div style="height: auto;" class="panel-body">
+                                <button class="btn btn-default" style="margin: 0 0 0 100px;">目的地查询</button>
+                                <button class="btn btn-default" style="margin: 0 0 0 100px;">区域查询</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--参数设置-->
+            <div class="tab-pane fade  in" id="cssz">
+                <form action="#" data-toggle="validate">
+                    <div class="tab-pane fade active in bjui-pageContent one" style="margin: 10px 0 0 0; border: 0px;">
+                        <div class="panel panel-default" style="width: 540px;height:390px;float: left;">
+                            <div class="panel-heading">
+                                &nbsp;参数设置
+                            </div>
+                            <div>
+                                <div style="height: auto;" class="panel-body">
+                                    <ul class="pra">
+                                        <li><span>IP地址或域名：</span><input type="text" size="20px" class="right2" />&nbsp;<span>端口：</span><input type="text" size="5px" /></li>
+                                        <li><span class="right">上报周期：</span><input type="text" size="10px" />&nbsp;<span class="right2">毫秒</span >&nbsp;<span >心跳周期:</span><input type="text" size="5px" />&nbsp;毫秒</li>
+                                        <li><span class="right">最大车速：</span><input type="text" size="10px" />&nbsp;<span class="right2">公里/小时</span >&nbsp;<span >&nbsp;<span >自动拍照时间：</span><input type="text" size="2px" />&nbsp;秒</li>
+                                        <li><span class="right1">最大行驶时间：</span><input type="text" size="10px" />&nbsp;<span class="right2">分钟</span>&nbsp;<span>最小休息时间：</span><input type="text" size="10px" />&nbsp;分钟</li>
+                                        <li><span class="right">休息模式：</span><input type="radio" name="sleep" data-toggle="icheck" data-label="本地休眠" />
+                                            <input type="radio" name="sleep" data-toggle="icheck" data-label="总线休眠" />
+                                            <input type="radio" name="sleep" data-toggle="icheck" data-label="远程休眠" />
+                                            <input type="radio" name="sleep" data-toggle="icheck" data-label="正常" />
+                                        </li>
+                                        <li><span class="right">SD卡存储频率：</span><select data-toggle="selectpicker">
+                                <option value="#">请选择</option>
+                                 <option value="1">1</option>
+                            </select>&nbsp;Hz
+                                        </li>
+                                        <li><span class="right1">数据上报顺序：</span><input type="radio" name="order" data-toggle="icheck" data-label="先进先出" />
+                                            <input type="radio" name="order" data-toggle="icheck" data-label="后进先出" />
+                                        </li>
+                                        <li><span class="right1">快速上报周期：</span><input type="text" size="10px" />&nbsp;<span class="right2">毫秒</span>&nbsp; <span>上报时间:</span><input type="text" size="10px" />&nbsp;秒
+                                        </li>
+                                        <li><span class="right">零部件号：</span><input type="text" size="10px" /></li>
+                                    </ul>
+                                    <p class="text-center" style="margin: 9px 0 0 0;">
+                                        <button type="submit" class="btn btn-default" style="margin: 0 20px 0 0;">设置</button>
+                                        <button type="submit" class="btn btn-default">取消</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" style="width: 194px; height:390px;float: right;">
+                            <div class="panel-heading">
+                                &nbsp;区域设置
+                            </div>
+                            <div style="height: auto;" class="panel-body">
+                                <button class=" btn-default btn-lg" style="margin: 70px 20px;">目的地设置</button>
+                                <button class=" btn-default btn-lg" style="margin: 20px 30px;">越界设置</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--在线升级-->
+            <div class="tab-pane fade  in" id="zxsj">
+                <form action="#" data-toggle="validate">
+                    <div style="height: auto;margin: 0 0 0 150px;" class="panel-body">
+                        <span>文件：</span>
+                        <input type="text" size="20px" name="update" />
+                        <div style="display:inline-block; vertical-align:middle;margin: 40px auto;">
+                            <div id="doc_pic_up" data-toggle="upload" data-uploader="doc/form/ajaxPic.html" data-file-size-limit="1024000000" data-file-type-exts="*.jpg;*.png;*.gif;*.mpg" data-multi="true" data-on-upload-success="doc_upload_success" data-icon="cloud-upload">
+
+                            </div>
+                            <input type="hidden" name="doc.pic" value="" id="doc_pic">
+                        </div>
+                        <span id="doc_span_pic"></span>
+                    </div>
+                    <button class="btn btn-default" style="margin: 10px 250px; width: 80px;">升级</button>
+                </form>
+            </div>
+
+            <!--终端状态-->
+            <div class="tab-pane fade  in zdztaa" id="zdzt">
+                <div class="bjui-pageContent one " style="margin: 10px 0 0 0;border: 0px;">
+                    <div class="panel panel-default" style="width: 450px;height:390px;float: left;">
+                        <div class="panel-heading">
+                            &nbsp;终端状态命令 
+                        </div>
+                        <div>
+                            <form action="#" data-toggle="validate">
+                                <div style="height: auto;" class="panel-body">
+                                    <ul id="aa">
+                                        <li id="aa">
+                                            <button class="btn btn-default" class="left">立即上报</button>
+                                         
+                                            <button class="btn btn-default" class="left1" style="margin-left: 10px;">终端重启</button>
+                                            <button class="btn btn-default" class="left" style="margin-left: 10px;">里程清零</button>
+                                        </li>
+                                        <li id="aa"> <button class="btn btn-default">累计清零</button></li>
+                                        <li id="aa"> <button class="btn btn-default">通道清零</button></li>
+                                        <li id="aa"> <button class="btn btn-default">开启数据触发</button></li>
+                                        <li id="aa"> <button class="btn btn-default">关闭数据触发</button> </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" style="width: 300px; height:390px;float: right;">
+                        <div class="panel-heading">
+                            &nbsp;执行命令
+                        </div>
+                        <div style="height: auto;" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--终端文件管理-->
+            <div class="tab-pane fade  in" id="zdwjgl">
+                <form action="#" data-toggle="validate">
+                    <div class="bjui-pageContent one zdwjglaa" style="margin: 10px 0 0 0; border:0px">
+                        <div class="panel panel-default" style="width:700px;height:300px;float: left;margin: 0 0 0 30px;;">
+                            <div class="panel-heading">
+                                &nbsp;终端文件管理
+                            </div>
+                            <div>
+                                <div style="height: auto;margin: 0 auto;" class="panel-body">
+                                    <div class="tab">
+                                        <table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+                                            <tr>
+                                                <td>序号</td>
+                                                <td>路径</td>
+                                                <td>大小（KB)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>/flash/SD/DBC/rq_v_3.43.dbc</td>
+                                                <td>39</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>/flash/SD/DBC/rq_v_3.43.dbc</td>
+                                                <td>39</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>/flash/SD/DBC/rq_v_3.43.dbc</td>
+                                                <td>39</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cent">
+                            <div class="Bar">
+                                <div style="width: 7.42%;">
+                                    <span>SD卡已使用568 MB/总容量7000 MB (7.42%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--拍照-->
+            <div class="tab-pane fade  in" id="pz">
+                <form action="#" data-toggle="validate">
+                    <div class="bjui-pageContent one" style="margin: 10px 0 0 0; border: 0px;">
+                        <div class="panel panel-default" style="width:700px;height:370px;float: left;margin: 0 0 0 30px;;">
+                            <div class="panel-heading">
+                                &nbsp;终端相册
+                            </div>
+                            <div>
+                                <div style="height: auto;margin: 0 0 0 150px;" class="panel-body">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-default " style="margin: 10px 0 0 360px;">拍照</button>
+                    </div>
+                </form>
+            </div>
+            <!--终端密码-->
+            <div class="tab-pane fade  in" id="zdmm">
+                <form action="#" data-toggle="validate">
+                    <div style="height: auto;margin: 0 0 0 150px;" class="panel-body">
+                        <ul>
+                            <li style="margin: 30px 0 0 10px;"> <span>输入终端密码：</span>&nbsp;<input type="text" size="30px" name="ps" />
+                            </li>
+                            <li style="margin: 20px 0 0 10px;"> <span>再次输入密码：</span>&nbsp;<input type="text" size="30px" name="ps1" />
+                            </li>
+                            <li style="margin: 30px 0 0 180px;"> <button class="btn btn-default" name="sub">设置</button>
+                            </li>
+                            <li style="margin: 40px 0 0 130px;"> <button class="btn btn-default" name="serc">查询密码</button>&nbsp;<span>密码明文：</span><span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>

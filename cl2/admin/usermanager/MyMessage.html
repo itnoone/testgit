@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyMessage.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	<!-- plugins -->
+		<!-- swfupload for uploadify && kindeditor -->
+		<script src="../../BJUI/js/bjui-dialog.js"></script>
+		<script type="text/javascript">
+			function openMydialog_message_edit(obj) {
+				//alert(obj.attributes[1].value);//获取href元素的值
+				var url=obj.attributes[1].value;
+				var text=obj.attributes[2].value;
+				var id=obj.attributes[3].value;
+			    $(obj).dialog({id:id,url:url,title:text,width:603,height:382});
+			}
+			
+			function open_file_dialog(){
+				
+				document.getElementById("image_file_upload").click();
+			}
+			
+	  </script>	
+	  <style type="text/css">
+	  .span{
+	  	font-size:20px;
+	  }
+	  
+	  .td{
+	  	width:150;
+	  	height:80px;
+	  
+	  }
+	  </style>
+  </head>
+  
+  <body>
+  <div class="bjui-pageContent">
+	<div class="panel panel-default" style="clear:both;">
+		</div>
+		<div style="height: auto;" class="panel-body1">
+		<!--	<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" style="text-align: center;">
+				 <tr>
+					<td>登录名</td>
+					<td>真实名字</td>
+					<td>性别</td>
+					<td>邮箱</td>
+					<td>电话</td>
+					<td>角色</td>
+					<td>注册日期</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					 <th width="125"></th>
+					<td>旺财</td>
+					<td>小强</td>
+					<td>男</td>
+					<td>it_noonehere@qq.com</td>
+					<td>1838383483</td>
+					<td>普通用户</td>
+					<td>2017-10-25 0:00:00</td>
+					<td>
+						<button type="button"  data-url="usermanager/user_dialog/Look_UserMessage_dialog.html" title="查看" data-id="1" class="btn btn-blue" onclick="openMydialog(this)"><i class="fa fa-binoculars"></i></button>
+						<button type="button" data-url="usermanager/user_dialog/Edit_UserMessage_dialog.html"  title="编辑" data-id="2" class="btn btn-default" onclick="openMydialog(this)"><i class="fa fa-edit"></i></button>
+					</td>
+				</tr> -->
+			<table class="table table-bordered table-hover table-striped table-top" data-toggle="tabledit" border="1" frame=void>
+				<tr>
+						<td width="150" style="height:60px" class="td"><span class="span">登&nbsp;&nbsp;录&nbsp;名：</span></td>
+						<td class="td">
+						<input type="text" class="span" size="20px" value="旺财" name="login_name" readonly="readonly"
+									style="height:50px;font-size:145%;"
+									data-rule="登录名: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/></td>
+						<td rowspan="4" ><div data-toggle="upload">
+								<img alt="我的头像" src="headportrait/123.jpg" title="点击图片更换头像" width="200px" height="200px" onclick="open_file_dialog()"/>
+								<input type="file" id="image_file_upload" hidden="hidden" style="display: none">
+								</div></td>
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">真实名字：</span></td>
+						<td class="td"><input type="text" class="default" size="20px" value="小强" name="real_name" readonly="readonly"
+									style="height:50px;font-size:145%;"
+									data-rule="真实名字: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/></td>
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">注册日期：</span></td>
+						<td class="td"><input type="text" class="default" size="20px" style="height:50px;font-size:145%;" value="2017-10-25 0:00:00" name="regist_data" readonly="readonly"/></td>
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱	：</span></td>
+						<td class="td">
+						<input type="text" class="default" size="20px" value="it_nice@qq.com" name="email"  readonly="readonly"
+									style="height:50px;font-size:145%;"
+									data-rule="邮箱: required; email;"   
+		       						data-msg-email="{0}请输入正确的邮箱"/></td>
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门：</span></td>
+						<td class="td"><input type="text" class="default" size="20px" value="人事管理部门" name="user_department" readonly="readonly"
+									style="height:50px;font-size:145%;"
+									data-rule="单位部门: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/></td>
+		       			<td><h5>点击图片更换头像</h5></td>			
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span></td>
+						<td class="td"><input type="text"  size="20px" value="18383834834" name="tel" readonly="readonly"
+									style="height:50px;font-size:145%;"
+									data-rule="手机号: required; mobile;"   
+		       						data-msg-email="{0}请输入正确手机号的格式"/></td>
+				</tr>
+				<tr>
+						<td class="td" width="150" style="height:60px"><span class="span">角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</span></td>
+						<td class="td"><input type="text" data-toggle="lookup" style="height:50px;font-size:145%;" data-options="{width:'611',title:'我的lookup'}" title="角色" data-url="admin/rolemanager/role_lookup/role_mylookup.html" name="name" size="20" value="管理员" disabled="disabled"></td>
+				</tr>
+				<tr>
+				
+					<td class="td" width="150" style="height:60px"><span class="span">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span></td>
+					<td class="td"><input type="text"  size="20px" value="男" name="gender" readonly="readonly"
+									style="height:50px;font-size:145%;"/>
+					<!-- <select data-toggle="selectpicker" name="gender" style="width:50px;font-size:145%; " disabled="disabled">
+								<option value="1" style="width:50px;font-size:145%;">男</option>
+								<option value="2" style="width:50px;font-size:145%;">女</option>
+							</select> --></td>
+				</tr>
+				<!-- <tr>
+				
+					<td><button type="button"  data-url="admin/usermanager/user_dialog/Look_UserMessage_dialog.html" title="查看" data-id="1" class="btn btn-blue" onclick="openMydialog(this)"><i class="fa fa-binoculars"></i></button></td>
+					<td></td>
+					<td><button type="button" data-url="admin/usermanager/user_dialog/Edit_UserMessage_dialog.html"  title="编辑" data-id="2" class="btn btn-default" onclick="openMydialog(this)"><i class="fa fa-edit"></i></button></td>
+				</tr> -->
+			
+				<!-- <span>登&nbsp;&nbsp;录&nbsp;名：</span><input type="text" class="default" size="20px" value="旺财" name="login_name"
+									data-rule="登录名: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/><br><br>
+						<span>真实名字：</span><input type="text" class="default" size="20px" value="小强" name="real_name"
+									data-rule="真实名字: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/><br><br>
+						<span>注册日期：</span><input type="text" class="default" size="20px" value="2017-10-25 0:00:00" name="regist_data" readonly="readonly"/><br><br>
+						<span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱	：</span><input type="text" class="default" size="20px" value="it_nice@qq.com" name="email" 
+									data-rule="邮箱: required; email;"   
+		       						data-msg-email="{0}请输入正确的邮箱"/><br><br>
+		       			<span>单位/部门：</span><input type="text" class="default" size="20px" value="人事管理部门" name="user_department"
+									data-rule="单位部门: required; !digits; length[2~]"   
+							        data-msg-digits="{0}不能使用纯数字"
+		       						data-msg-length="{0}至少2位"/><br><br>
+		       			 
+						<span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span><input type="text" class="default" size="20px" value="18383834834" name="tel"
+									data-rule="手机号: required; mobile;"   
+		       						data-msg-email="{0}请输入正确手机号的格式"/><br><br>
+						<span>角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</span><input type="text" class="default" size="20px" value="管理员" readonly="readonly"/><br><br>
+						<span>角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</span><input type="text" data-toggle="lookup" data-options="{width:'611',title:'我的lookup'}" title="角色" data-url="admin/rolemanager/role_lookup/role_mylookup.html" name="name" size="20" value="管理员" disabled="disabled"><br><br>
+						<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span><select data-toggle="selectpicker" name="gender">
+								<option value="1">男</option>
+								<option value="2">女</option>
+							</select><br>
+							
+							<img alt="我的头像" src="headportrait/123.jpg" width="100px" height="100px"/>
+							<br><br> -->
+			</table>
+			<h5 style="color:red;">编辑信息&nbsp;<button type="button" data-url="admin/usermanager/user_dialog/Edit_UserMessage_dialog.html"  title="编辑" data-id="2" class="btn btn-default" onclick="openMydialog_message_edit(this)"><i class="fa fa-edit"></i></button></h5>
+		</div>
+	</div>	
+  </body>
+</html>
